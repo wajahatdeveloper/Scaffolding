@@ -5,9 +5,9 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class SettingsPanel : MonoBehaviour
+public class SettingsPanel : PanelBase
 {
-    private const string LogClassName = "MainMenu";
+    private const string LogClassName = "SettingsPanel";
 
     [TitleGroup("Audio")]
     public Slider soundVolumeSlider;
@@ -18,7 +18,7 @@ public class SettingsPanel : MonoBehaviour
     public Toggle graphicsMediumToggle;
     public Toggle graphicsHighToggle;
 
-    public void Init()
+    public override void Init()
     {
         soundVolumeSlider.minValue = 0.0001f;   // important
         soundVolumeSlider.maxValue = 1f;
@@ -79,6 +79,6 @@ public class SettingsPanel : MonoBehaviour
     public void OnClick_Back()
     {
         DebugX.Log($"{LogClassName} : Back Button Clicked.", LogFilters.None, gameObject);
-        gameObject.SetActive(false);
+        Hide();
     }
 }

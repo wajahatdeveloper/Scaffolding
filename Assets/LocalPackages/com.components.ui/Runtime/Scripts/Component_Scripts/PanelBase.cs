@@ -6,6 +6,13 @@ using UnityEngine;
 public class PanelBase : MonoBehaviour
 {
     /// <summary>
+    /// One Time Initialization
+    /// </summary>
+    public virtual void Init()
+    {
+    }
+
+    /// <summary>
     /// Activates the panel <see cref="GameObject"/>.
     /// </summary>
     public void Show()
