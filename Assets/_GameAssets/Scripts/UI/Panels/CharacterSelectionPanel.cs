@@ -11,7 +11,7 @@ public class CharacterSelectionPanel : PanelBase
     private const string LogClassName = "CharacterSelectionPanel";
 
     [TitleGroup("Character Previews")]
-    [SceneObjectsOnly] public Transform content;
+    [SceneObjectsOnly] public GameObject characterPreviewHolder;
     [ReadOnly] public List<GameObject> characterPreviews = new();
 
     [TitleGroup("Buttons")]
@@ -30,14 +30,19 @@ public class CharacterSelectionPanel : PanelBase
 
     public override void Init()
     {
-        content.gameObject.SetActive(false);
-        var children = content.GetChildren();
+        characterPreviewHolder.SetActive(false);
+        var children = characterPreviewHolder.transform.GetChildren();
         characterPreviews.AddRange(children.Select(x=>x.gameObject));
     }
 
     protected override void OnAfterShow()
     {
         ShowCharacterPreview(SelectedCharacterNumber);
+    }
+
+    protected override void OnBeforeHide()
+    {
+        HideCharacterPreview();
     }
 
     public void OnClick_Left()
@@ -74,5 +79,11 @@ public class CharacterSelectionPanel : PanelBase
     {
         characterPreviews.ForEach(x => x.SetActive(false));
         characterPreviews[number - 1].SetActive(true);
+        characterPreviewHolder.SetActive(true);
+    }
+    
+    private void HideCharacterPreview()
+    {
+        characterPreviewHolder.SetActive(false);
     }
 }

@@ -3786,7 +3786,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: edeb60ffb8872084d85b959b742c26cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  content: {fileID: 560388852}
+  characterPreviewHolder: {fileID: 560388851}
   characterPreviews: []
   leftButton: {fileID: 61992529}
   rightButton: {fileID: 1139724118}
