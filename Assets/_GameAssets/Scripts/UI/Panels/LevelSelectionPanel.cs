@@ -8,6 +8,9 @@ public class LevelSelectionPanel : PanelBase
 {
     private const string LogClassName = "LevelSelectionPanel";
 
+    [TitleGroup("Buttons")]
+    public Button backButton;
+    
     [TitleGroup("Level Buttons")]
     public int levelButtonCount = 10;
 

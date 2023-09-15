@@ -8,6 +8,9 @@ public class ModeSelectionPanel : PanelBase
 {
     private const string LogClassName = "ModeSelectionPanel";
 
+    [TitleGroup("Buttons")]
+    public Button backButton;
+    
     [TitleGroup("Mode Buttons")]
     public Button storyMode;
     public Button freeRoamMode;
@@ -39,6 +42,7 @@ public class ModeSelectionPanel : PanelBase
     public void OnClick_Back()
     {
         DebugX.Log($"{LogClassName} : Back Button Clicked.", LogFilters.None, gameObject);
+        MainMenu.Instance.startScreenPanel.Show();
         Hide();
     }
 }
