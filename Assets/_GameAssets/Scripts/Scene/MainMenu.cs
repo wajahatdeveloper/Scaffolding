@@ -28,10 +28,12 @@ public class MainMenu : MonoBehaviour
     public void OnClick_Play()
     {
         DebugX.Log($"{LogClassName} : Play Button Clicked.", LogFilters.None, gameObject);
+        modeSelectionPanel.SetActive(true);
     }
 
     public void OnClick_Settings()
     {
         DebugX.Log($"{LogClassName} : Settings Button Clicked.", LogFilters.None, gameObject);
+        settingsPanel.SetActive(true);
     }
 }

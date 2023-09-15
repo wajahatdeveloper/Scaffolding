@@ -9,26 +9,31 @@ public class SettingsPanel : MonoBehaviour
 {
     private const string LogClassName = "MainMenu";
 
-    [TitleGroup("Audio")] public Slider soundVolumeSlider;
+    [TitleGroup("Audio")]
+    public Slider soundVolumeSlider;
     public Slider musicVolumeSlider;
 
-    [TitleGroup("Graphics")] public Button graphicsLowButton;
-    public Button graphicsMediumButton;
-    public Button graphicsHighButton;
+    [TitleGroup("Graphics")]
+    public Toggle graphicsLowToggle;
+    public Toggle graphicsMediumToggle;
+    public Toggle graphicsHighToggle;
 
     public void OnClick_GraphicsLow()
     {
         DebugX.Log($"{LogClassName} : Graphics Low Button Clicked.", LogFilters.None, gameObject);
+        GraphicsManager.Instance.SetGraphicsLow();
     }
 
     public void OnClick_GraphicsMedium()
     {
         DebugX.Log($"{LogClassName} : Graphics Medium Button Clicked.", LogFilters.None, gameObject);
+        GraphicsManager.Instance.SetGraphicsMedium();
     }
 
     public void OnClick_GraphicsHigh()
     {
         DebugX.Log($"{LogClassName} : Graphics High Button Clicked.", LogFilters.None, gameObject);
+        GraphicsManager.Instance.SetGraphicsHigh();
     }
 
     public void OnValueChanged_SoundVolume(float value)
