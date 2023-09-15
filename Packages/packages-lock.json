@@ -163,6 +163,13 @@
       "dependencies": {},
       "hash": "0fac5b55575de3d708db618800f1f6f5a0215ce9"
     },
+    "com.utility.enhancedheirarchy": {
+      "version": "https://github.com/wajahatdeveloper/Modules.git?path=/Assets/EditorModules/com.utility.enhancedheirarchy",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "46c1a5bae66b36fba676f250df9c2e09823a560e"
+    },
     "com.utility.package2folder": {
       "version": "https://github.com/wajahatdeveloper/Modules.git?path=/Assets/EditorModules/com.utility.package2folder",
       "depth": 0,
