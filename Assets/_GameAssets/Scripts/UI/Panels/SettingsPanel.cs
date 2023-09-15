@@ -18,13 +18,16 @@ public class SettingsPanel : MonoBehaviour
     public Toggle graphicsMediumToggle;
     public Toggle graphicsHighToggle;
 
-    private void Start()
+    public void Init()
     {
         soundVolumeSlider.minValue = 0.0001f;   // important
         soundVolumeSlider.maxValue = 1f;
 
         musicVolumeSlider.minValue = 0.0001f;   // important
         musicVolumeSlider.maxValue = 1f;
+
+        soundVolumeSlider.value = AudioManager.Instance.GetSoundVolume();
+        musicVolumeSlider.value = AudioManager.Instance.GetMusicVolume();
     }
 
     public void OnClick_GraphicsLow()
@@ -48,11 +51,13 @@ public class SettingsPanel : MonoBehaviour
     public void OnValueChanged_SoundVolume(float value)
     {
         DebugX.Log($"{LogClassName} : Sound Volume => {value}", LogFilters.None, gameObject);
+        AudioManager.Instance.SetSoundVolume(value);
     }
 
     public void OnValueChanged_MusicVolume(float value)
     {
         DebugX.Log($"{LogClassName} : Music Volume => {value}", LogFilters.None, gameObject);
+        AudioManager.Instance.SetMusicVolume(value);
     }
 
     public void OnClick_Back()

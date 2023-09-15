@@ -12,10 +12,10 @@ public class AudioManager : SingletonBehaviour<AudioManager>
 
     [Header("References")]
     public AudioMixer audioMixer;
-
-    public AudioMixerGroup masterMixer;
-    public AudioMixerGroup soundMixer;
-    public AudioMixerGroup musicMixer;
+    public AudioMixerGroup masterGroup;
+    public AudioMixerGroup soundGroup;
+    public AudioMixerGroup UIGroup;
+    public AudioMixerGroup musicGroup;
 
     private static Dictionary<int, Audio> musicAudio = new();
     private static Dictionary<int, Audio> soundsAudio = new();
@@ -702,7 +702,7 @@ public class AudioManager : SingletonBehaviour<AudioManager>
                 StopAllMusic(currentMusicfadeOutSeconds);
             }
 
-            GetAudio(audioType, false, audioID).Play();
+            GetAudio(audioType, true, audioID).Play();
 
             return audioID;
         }

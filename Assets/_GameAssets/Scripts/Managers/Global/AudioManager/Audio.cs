@@ -382,13 +382,13 @@ public class Audio
             switch (Type)
             {
                 case AudioType.Music:
-                    AudioSource.outputAudioMixerGroup = AudioManager.Instance.musicMixer;
+                    AudioSource.outputAudioMixerGroup = AudioManager.Instance.musicGroup;
                     break;
                 case AudioType.Sound:
-                    AudioSource.outputAudioMixerGroup = AudioManager.Instance.soundMixer;
+                    AudioSource.outputAudioMixerGroup = AudioManager.Instance.soundGroup;
                     break;
                 case AudioType.UISound:
-                    AudioSource.outputAudioMixerGroup = AudioManager.Instance.soundMixer;
+                    AudioSource.outputAudioMixerGroup = AudioManager.Instance.UIGroup;
                     break;
                 default:
                     throw new ArgumentOutOfRangeException();

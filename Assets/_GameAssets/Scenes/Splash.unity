@@ -774,10 +774,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioMixer: {fileID: 24100000, guid: b0d65a0785b7494408859af16eaa6dc7, type: 2}
-  masterMixer: {fileID: 24300002, guid: b0d65a0785b7494408859af16eaa6dc7, type: 2}
-  soundMixer: {fileID: 4087288427779035643, guid: b0d65a0785b7494408859af16eaa6dc7,
+  masterGroup: {fileID: 24300002, guid: b0d65a0785b7494408859af16eaa6dc7, type: 2}
+  soundGroup: {fileID: 4087288427779035643, guid: b0d65a0785b7494408859af16eaa6dc7,
     type: 2}
-  musicMixer: {fileID: -2717892440614957684, guid: b0d65a0785b7494408859af16eaa6dc7,
+  UIGroup: {fileID: -1176282857003545171, guid: b0d65a0785b7494408859af16eaa6dc7,
+    type: 2}
+  musicGroup: {fileID: -2717892440614957684, guid: b0d65a0785b7494408859af16eaa6dc7,
     type: 2}
 --- !u!1001 &1633351304
 PrefabInstance:
