@@ -75,10 +75,10 @@ namespace InfinityCode.UltimateEditorEnhancer
         [MenuItem(WindowsHelper.MenuPath + "Start Trial", false, 129)]
         public static void StartTrial()
         {
-            if (isTrial) return;
+            /*if (isTrial) return;
             _trialStarted = DateTime.Now;
             EditorPrefs.SetString(KEY, _trialStarted.Value.Ticks.ToString());
-            ToolbarTrialIcon.UpdateContent();
+            ToolbarTrialIcon.UpdateContent();*/
         }
     }
 }
