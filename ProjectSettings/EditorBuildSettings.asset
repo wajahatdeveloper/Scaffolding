@@ -8,4 +8,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_GameAssets/Scenes/Splash.unity
     guid: d85b8d13b8f957d4b982253862e8beee
+  - enabled: 1
+    path: Assets/_GameAssets/Scenes/MainMenu.unity
+    guid: c990fc47070445642a581cd772688300
   m_configObjects: {}
