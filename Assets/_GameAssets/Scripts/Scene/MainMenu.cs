@@ -17,15 +17,17 @@ public class MainMenu : MonoBehaviour
 
     [TitleGroup("Panels")]
     public GameObject modeSelectionPanel;
-    public GameObject settingsPanel;
+    public SettingsPanel settingsPanel;
 
     private void Start()
     {
         DebugX.Log($"{LogClassName} : Initializing Main Menu..",LogFilters.None, gameObject);
+
+        GraphicsManager.Instance.Init();
+        settingsPanel.Init();
         LoadingPanel.Instance.HideIfShown();   // For Loading persisted from Gameplay Scene
 
-        settingsPanel.GetComponent<SettingsPanel>().Init();
-
+        //* For Testing
         AudioManager.PlayMusic(AudioData.Instance.backgroundMusic);
         AudioManager.PlaySound(AudioData.Instance.playerWin, true);
     }
@@ -41,7 +43,7 @@ public class MainMenu : MonoBehaviour
     {
         PlayButtonClickSound();
         DebugX.Log($"{LogClassName} : Settings Button Clicked.", LogFilters.None, gameObject);
-        settingsPanel.SetActive(true);
+        settingsPanel.gameObject.SetActive(true);
     }
 
     private void PlayButtonClickSound()

@@ -28,6 +28,22 @@ public class SettingsPanel : MonoBehaviour
 
         soundVolumeSlider.value = AudioManager.Instance.GetSoundVolume();
         musicVolumeSlider.value = AudioManager.Instance.GetMusicVolume();
+
+        int graphicsSelection = GraphicsManager.Instance.GetGraphicsSelection();
+        switch (graphicsSelection)
+        {
+            case 1:
+                graphicsLowToggle.isOn = true;
+                break;
+
+            case 2:
+                graphicsMediumToggle.isOn = true;
+                break;
+
+            case 3:
+                graphicsHighToggle.isOn = true;
+                break;
+        }
     }
 
     public void OnClick_GraphicsLow()
