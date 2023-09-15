@@ -18,6 +18,15 @@ public class SettingsPanel : MonoBehaviour
     public Toggle graphicsMediumToggle;
     public Toggle graphicsHighToggle;
 
+    private void Start()
+    {
+        soundVolumeSlider.minValue = 0.0001f;   // important
+        soundVolumeSlider.maxValue = 1f;
+
+        musicVolumeSlider.minValue = 0.0001f;   // important
+        musicVolumeSlider.maxValue = 1f;
+    }
+
     public void OnClick_GraphicsLow()
     {
         DebugX.Log($"{LogClassName} : Graphics Low Button Clicked.", LogFilters.None, gameObject);
