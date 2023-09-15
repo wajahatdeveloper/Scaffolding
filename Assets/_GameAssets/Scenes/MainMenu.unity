@@ -3547,7 +3547,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &418544753
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3620,6 +3620,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5dec30bf30c711c4780344563fa71051, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dailyRewardsInterface: {fileID: 11400098, guid: aa48b2196cbbe06429a05f1614e2e9b2,
+    type: 3}
   backButton: {fileID: 1248537992}
 --- !u!1 &420512223 stripped
 GameObject:
@@ -7687,8 +7689,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 418544756}
-        m_TargetAssemblyTypeName: PanelBase, com.components.ui
-        m_MethodName: Hide
+        m_TargetAssemblyTypeName: DailyRewardsPanel, Assembly-CSharp
+        m_MethodName: OnClick_Back
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
