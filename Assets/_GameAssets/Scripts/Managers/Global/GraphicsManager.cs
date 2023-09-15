@@ -5,17 +5,16 @@ using UnityEngine;
 public class GraphicsManager : SingletonBehaviour<GraphicsManager>
 {
     private const string LogClassName = "GraphicsManager";
-    private const string graphicsKey = "Graphics";
 
-    public int GetGraphicsSelection()
+    public int SelectedGraphicsLevel
     {
-        return PlayerPrefsX.GetInt(graphicsKey, 2);    // medium by default
+        get => PlayerPrefsX.GetInt("Graphics", 2);    // medium by default
+        set => PlayerPrefsX.SetInt("Graphics", value);
     }
-
+    
     public void Init()
     {
-        int graphicsSelection = GetGraphicsSelection();
-        switch (graphicsSelection)
+        switch (SelectedGraphicsLevel)
         {
             case 1:
                 SetGraphicsLow();
@@ -34,18 +33,18 @@ public class GraphicsManager : SingletonBehaviour<GraphicsManager>
     public void SetGraphicsLow()
     {
         DebugX.Log($"{LogClassName} : Graphics => Low.", LogFilters.Analytics, gameObject);
-        PlayerPrefsX.SetInt(graphicsKey, 1);
+        SelectedGraphicsLevel = 1;
     }
 
     public void SetGraphicsMedium()
     {
         DebugX.Log($"{LogClassName} : Graphics => Medium.", LogFilters.Analytics, gameObject);
-        PlayerPrefsX.SetInt(graphicsKey, 2);
+        SelectedGraphicsLevel = 2;
     }
 
     public void SetGraphicsHigh()
     {
         DebugX.Log($"{LogClassName} : Graphics => High.", LogFilters.Analytics, gameObject);
-        PlayerPrefsX.SetInt(graphicsKey, 3);
+        SelectedGraphicsLevel = 3;
     }
 }

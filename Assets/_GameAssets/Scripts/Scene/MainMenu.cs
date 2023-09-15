@@ -18,6 +18,7 @@ public class MainMenu : SingletonBehaviour<MainMenu>
     [TitleGroup("Panels")]
     public PanelBase modeSelectionPanel;
     public PanelBase levelSelectionPanel;
+    public PanelBase characterSelectionPanel;
     public PanelBase settingsPanel;
 
     private void Start()
@@ -29,6 +30,7 @@ public class MainMenu : SingletonBehaviour<MainMenu>
         settingsPanel.Init();
         modeSelectionPanel.Init();
         levelSelectionPanel.Init();
+        characterSelectionPanel.Init();
 
         LoadingPanel.Instance.HideIfShown();   // For Loading persisted from Gameplay Scene
     }

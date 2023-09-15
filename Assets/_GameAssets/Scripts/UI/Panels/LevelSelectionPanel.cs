@@ -15,6 +15,12 @@ public class LevelSelectionPanel : PanelBase
     [AssetsOnly] public GameObject levelButtonPrefab;
     [ReadOnly] public List<LevelButton> levelButtons = new();
 
+    public int SelectedLevelNumber
+    {
+        get => PlayerPrefsX.GetInt("SelectedLevelNumber", 1);
+        set => PlayerPrefsX.SetInt("SelectedLevelNumber", value);
+    }
+    
     public override void Init()
     {
         for (int i = 0; i < levelButtonCount; i++)
@@ -30,11 +36,16 @@ public class LevelSelectionPanel : PanelBase
     private void OnClick_Level(int number)
     {
         DebugX.Log($"{LogClassName} : Level {number} Button Clicked.", LogFilters.None, gameObject);
+        SelectedLevelNumber = number;
+
+        MainMenu.Instance.characterSelectionPanel.Show();
+        Hide();
     }
 
     public void OnClick_Back()
     {
         DebugX.Log($"{LogClassName} : Back Button Clicked.", LogFilters.None, gameObject);
+        MainMenu.Instance.modeSelectionPanel.Show();
         Hide();
     }
 }

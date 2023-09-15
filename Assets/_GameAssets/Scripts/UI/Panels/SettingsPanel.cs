@@ -29,7 +29,7 @@ public class SettingsPanel : PanelBase
         soundVolumeSlider.value = AudioManager.Instance.GetSoundVolume();
         musicVolumeSlider.value = AudioManager.Instance.GetMusicVolume();
 
-        int graphicsSelection = GraphicsManager.Instance.GetGraphicsSelection();
+        int graphicsSelection = GraphicsManager.Instance.SelectedGraphicsLevel;
         switch (graphicsSelection)
         {
             case 1:
