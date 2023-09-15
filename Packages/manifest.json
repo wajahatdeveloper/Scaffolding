@@ -11,6 +11,8 @@
     "com.unity.textmeshpro": "3.0.6",
     "com.unity.timeline": "1.7.5",
     "com.unity.ugui": "1.0.0",
+    "com.utility.assetusagedetector": "https://github.com/wajahatdeveloper/Modules.git?path=/Assets/EditorModules/com.utility.assetusagedetector",
+    "com.utility.consoleprodebug": "https://github.com/wajahatdeveloper/Modules.git?path=/Assets/EditorModules/com.utility.consoleprodebug",
     "com.utility.package2folder": "https://github.com/wajahatdeveloper/Modules.git?path=/Assets/EditorModules/com.utility.package2folder",
     "com.utility.playerprefeditor": "https://github.com/wajahatdeveloper/Modules.git?path=/Assets/EditorModules/com.utility.playerprefeditor",
     "com.utility.playmodesaver": "https://github.com/wajahatdeveloper/Modules.git?path=/Assets/EditorModules/com.utility.playmodesaver",
