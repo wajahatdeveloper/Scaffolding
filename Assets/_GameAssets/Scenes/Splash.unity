@@ -773,6 +773,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c1d2145e2404a143866aac0d205b4e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioData: {fileID: 11400000, guid: d59a6c172a20cec4681a366c233efcdf, type: 2}
   audioMixer: {fileID: 24100000, guid: b0d65a0785b7494408859af16eaa6dc7, type: 2}
   masterGroup: {fileID: 24300002, guid: b0d65a0785b7494408859af16eaa6dc7, type: 2}
   soundGroup: {fileID: 4087288427779035643, guid: b0d65a0785b7494408859af16eaa6dc7,

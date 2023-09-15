@@ -17,6 +17,7 @@ public class MainMenu : MonoBehaviour
 
     [TitleGroup("Panels")]
     public PanelBase modeSelectionPanel;
+    public PanelBase levelSelectionPanel;
     public PanelBase settingsPanel;
 
     private void Start()
@@ -27,12 +28,13 @@ public class MainMenu : MonoBehaviour
 
         settingsPanel.Init();
         modeSelectionPanel.Init();
+        levelSelectionPanel.Init();
 
         LoadingPanel.Instance.HideIfShown();   // For Loading persisted from Gameplay Scene
 
         //* For Testing
-        AudioManager.PlayMusic(AudioData.Instance.backgroundMusic);
-        AudioManager.PlaySound(AudioData.Instance.playerWin, true);
+        AudioManager.PlayMusic(AudioManager.GetAudioData().backgroundMusic);
+        AudioManager.PlaySound(AudioManager.GetAudioData().playerWin, true);
     }
 
     public void OnClick_Play()
@@ -51,6 +53,6 @@ public class MainMenu : MonoBehaviour
 
     private void PlayButtonClickSound()
     {
-        AudioManager.PlayUISound(AudioData.Instance.buttonClick);
+        AudioManager.PlayUISound(AudioManager.GetAudioData().buttonClick);
     }
 }

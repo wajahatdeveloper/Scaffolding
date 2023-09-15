@@ -1,11 +1,8 @@
-using System.Collections;
-using System.Collections.Generic;
 using Sirenix.OdinInspector;
-using UnityEditor;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "AudioData", menuName = "Custom/AudioData")]
-public class AudioDataScriptable : ScriptableSingleton<AudioDataScriptable>
+public class AudioDataScriptable : ScriptableObject
 {
     [TitleGroup("UI Sounds")]
     public AudioClip buttonClick;
@@ -15,9 +12,4 @@ public class AudioDataScriptable : ScriptableSingleton<AudioDataScriptable>
 
     [TitleGroup("Music")]
     public AudioClip backgroundMusic;
-}
-
-public static class AudioData
-{
-    public static AudioDataScriptable Instance => AudioDataScriptable.instance;
 }

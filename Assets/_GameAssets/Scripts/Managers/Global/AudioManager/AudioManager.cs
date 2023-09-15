@@ -11,6 +11,7 @@ public class AudioManager : SingletonBehaviour<AudioManager>
     private const string LogClassName = "AudioManager";
 
     [Header("References")]
+    public AudioDataScriptable audioData;
     public AudioMixer audioMixer;
     public AudioMixerGroup masterGroup;
     public AudioMixerGroup soundGroup;
@@ -73,6 +74,11 @@ public class AudioManager : SingletonBehaviour<AudioManager>
     }
 
     #endregion
+
+    public static AudioDataScriptable GetAudioData()
+    {
+        return Instance.audioData;
+    }
 
     private void OnEnable()
     {
