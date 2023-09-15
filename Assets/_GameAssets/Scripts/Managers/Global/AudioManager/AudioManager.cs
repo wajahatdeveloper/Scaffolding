@@ -36,7 +36,7 @@ public class AudioManager : SingletonBehaviour<AudioManager>
     /// <summary>
     /// When set to true, new UI sound audios that have the same audio clip as any other UI sound audios, will be ignored
     /// </summary>
-    public static bool IgnoreDuplicateUISounds { get; set; } = true;
+    public static bool IgnoreDuplicateUISounds { get; set; } = false;
 
     #region Volume
 

@@ -8,5 +8,5 @@ public class LevelButton : MonoBehaviour
 {
     public int number;
     public Button button;
-    public TextMeshProUGUI text;
+    public TextMeshProUGUI levelText;
 }

@@ -4,7 +4,7 @@ using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class MainMenu : MonoBehaviour
+public class MainMenu : SingletonBehaviour<MainMenu>
 {
     private const string LogClassName = "MainMenu";
 
@@ -31,28 +31,17 @@ public class MainMenu : MonoBehaviour
         levelSelectionPanel.Init();
 
         LoadingPanel.Instance.HideIfShown();   // For Loading persisted from Gameplay Scene
-
-        //* For Testing
-        AudioManager.PlayMusic(AudioManager.GetAudioData().backgroundMusic);
-        AudioManager.PlaySound(AudioManager.GetAudioData().playerWin, true);
     }
 
     public void OnClick_Play()
     {
-        PlayButtonClickSound();
         DebugX.Log($"{LogClassName} : Play Button Clicked.", LogFilters.None, gameObject);
         modeSelectionPanel.Show();
     }
 
     public void OnClick_Settings()
     {
-        PlayButtonClickSound();
         DebugX.Log($"{LogClassName} : Settings Button Clicked.", LogFilters.None, gameObject);
         settingsPanel.Show();
-    }
-
-    private void PlayButtonClickSound()
-    {
-        AudioManager.PlayUISound(AudioManager.GetAudioData().buttonClick);
     }
 }

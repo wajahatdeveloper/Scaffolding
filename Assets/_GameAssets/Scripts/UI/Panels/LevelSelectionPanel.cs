@@ -9,11 +9,27 @@ public class LevelSelectionPanel : PanelBase
     private const string LogClassName = "LevelSelectionPanel";
 
     [TitleGroup("Level Buttons")]
-    public List<Button> levelButtons = new();
+    public int levelButtonCount = 10;
 
-    public void OnClick_Level(int index)
+    [SceneObjectsOnly] public Transform content;
+    [AssetsOnly] public GameObject levelButtonPrefab;
+    [ReadOnly] public List<LevelButton> levelButtons = new();
+
+    public override void Init()
     {
-        DebugX.Log($"{LogClassName} : Level {index} Button Clicked.", LogFilters.None, gameObject);
+        for (int i = 0; i < levelButtonCount; i++)
+        {
+            var btn = Instantiate(levelButtonPrefab, content).GetComponent<LevelButton>();
+            btn.number = i + 1;
+            btn.button.onClick.AddListener(()=>OnClick_Level(btn.number));
+            btn.levelText.text = $"Level {btn.number}";
+            levelButtons.Add(btn);
+        }
+    }
+
+    private void OnClick_Level(int number)
+    {
+        DebugX.Log($"{LogClassName} : Level {number} Button Clicked.", LogFilters.None, gameObject);
     }
 
     public void OnClick_Back()

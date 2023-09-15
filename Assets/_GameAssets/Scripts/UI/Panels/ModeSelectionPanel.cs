@@ -15,6 +15,8 @@ public class ModeSelectionPanel : PanelBase
     public void OnClick_StoryMode()
     {
         DebugX.Log($"{LogClassName} : Story Mode Button Clicked.", LogFilters.None, gameObject);
+        MainMenu.Instance.levelSelectionPanel.Show();
+        Hide();
     }
 
     public void OnClick_FreeRoamMode()
