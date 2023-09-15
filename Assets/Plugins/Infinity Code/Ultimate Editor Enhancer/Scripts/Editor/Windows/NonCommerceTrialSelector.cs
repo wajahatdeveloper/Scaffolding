@@ -79,7 +79,7 @@ namespace InfinityCode.UltimateEditorEnhancer.Windows
 
         public static void OpenWindow()
         {
-            //NonCommerceTrialSelector wnd = GetWindow<NonCommerceTrialSelector>(true, "Choose version of Ultimate Editor Enhancer you want to use?");
+            NonCommerceTrialSelector wnd = GetWindow<NonCommerceTrialSelector>(true, "Choose version of Ultimate Editor Enhancer you want to use?");
         }
     }
 }

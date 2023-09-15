@@ -34,7 +34,7 @@ namespace InfinityCode.UltimateEditorEnhancer.Tools
 
         public static void Init()
         {
-            //ToolbarManager.AddRightToolbar("Trial-NonCommerce", DrawIcon, int.MaxValue);
+            ToolbarManager.AddRightToolbar("Trial-NonCommerce", DrawIcon, int.MaxValue);
         }
 
         public static void UpdateContent()

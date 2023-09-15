@@ -113,9 +113,9 @@ namespace InfinityCode.UltimateEditorEnhancer.InspectorTools
             VisualElement topContent = new VisualElement();
             parent.Add(topContent);
 
-            //Updater.CheckNewVersionAvailable();
+            Updater.CheckNewVersionAvailable();
 
-            /*if (Updater.hasNewVersion)
+            if (Updater.hasNewVersion)
             {
                 ToolbarButton updateAvailable = new ToolbarButton(Updater.OpenWindow);
                 updateAvailable.text = "A new version of Ultimate Editor Enhancer is available.\nClick to open the built-in update system.";
@@ -127,7 +127,7 @@ namespace InfinityCode.UltimateEditorEnhancer.InspectorTools
                 updateAvailable.style.paddingTop = updateAvailable.style.paddingBottom = 5;
                 updateAvailable.style.borderLeftWidth = updateAvailable.style.borderRightWidth = 0;
                 topContent.Add(updateAvailable);
-            }*/
+            }
 
             Label helpbox = new Label("Nothing selected");
             helpbox.style.backgroundColor = Color.gray;
