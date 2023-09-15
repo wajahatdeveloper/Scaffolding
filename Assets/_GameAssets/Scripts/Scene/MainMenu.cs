@@ -14,11 +14,13 @@ public class MainMenu : SingletonBehaviour<MainMenu>
     [TitleGroup("Buttons")]
     public Button playButton;
     public Button settingsButton;
+    public Button shopButton;
 
     [TitleGroup("Panels")]
     public PanelBase modeSelectionPanel;
     public PanelBase levelSelectionPanel;
     public PanelBase characterSelectionPanel;
+    public PanelBase shopPanel;
     public PanelBase settingsPanel;
 
     private void Start()
@@ -26,7 +28,8 @@ public class MainMenu : SingletonBehaviour<MainMenu>
         DebugX.Log($"{LogClassName} : Initializing Main Menu..",LogFilters.None, gameObject);
 
         GraphicsManager.Instance.Init();
-
+        
+        shopPanel.Init();
         settingsPanel.Init();
         modeSelectionPanel.Init();
         levelSelectionPanel.Init();
@@ -45,5 +48,11 @@ public class MainMenu : SingletonBehaviour<MainMenu>
     {
         DebugX.Log($"{LogClassName} : Settings Button Clicked.", LogFilters.None, gameObject);
         settingsPanel.Show();
+    }
+    
+    public void OnClick_Shop()
+    {
+        DebugX.Log($"{LogClassName} : Shop Button Clicked.", LogFilters.None, gameObject);
+        shopPanel.Show();
     }
 }
